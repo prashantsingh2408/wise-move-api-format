@@ -1,4 +1,4 @@
-# Content Creator Chat Profile API
+# Wise Move APIs
 
 [prompt](PROMPT.md)
 
