@@ -7,7 +7,6 @@ import os
 from typing import Optional, List
 from pydantic import BaseModel
 import population
-import cost_of_living
 
 # Define response models for better documentation
 class CityPopulation(BaseModel):
@@ -15,15 +14,6 @@ class CityPopulation(BaseModel):
     population: str
     population_proper: str
     admin_name: str
-
-class CityCostOfLiving(BaseModel):
-    city: str
-    cost_of_living_index: float
-    rent_index: float
-    cost_of_living_plus_rent_index: float
-    groceries_index: float
-    restaurant_price_index: float
-    local_purchasing_power_index: float
 
 class Message(BaseModel):
     message: str
@@ -33,16 +23,14 @@ class PopulateResponse(BaseModel):
     message: str
 
 app = FastAPI(
-    title="Population and Cost of Living API",
+    title="India Population API",
     description="""
-    An API providing population data for cities in India and cost of living data worldwide.
-    Data sources: 
-    - Population: https://simplemaps.com/data/in-cities
-    - Cost of Living: Your cost of living dataset
+    An API providing population data for cities in India.
+    Data source: https://simplemaps.com/data/in-cities
     """,
     version="1.0.0",
     contact={
-        "name": "Population and Cost of Living API Team",
+        "name": "Population API Team",
     }
 )
 
@@ -58,16 +46,15 @@ app.add_middleware(
 @app.get("/", response_model=Message, tags=["General"])
 async def root():
     """
-    Welcome endpoint for the API.
+    Welcome endpoint for the Population API.
     
     Returns:
         dict: A welcome message
     """
-    return {"message": "Welcome to the Population and Cost of Living API"}
+    return {"message": "Welcome to the Population API"}
 
-# Population endpoints
-@app.post("/population/populate", response_model=PopulateResponse, tags=["Population"])
-async def populate_population():
+@app.post("/populate", response_model=PopulateResponse, tags=["Population"])
+async def populate():
     """
     Populate the database with population data.
     
@@ -83,7 +70,7 @@ async def populate_population():
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@app.get("/population/city/{city_name}", response_model=CityPopulation, tags=["Population"])
+@app.get("/city/{city_name}", response_model=CityPopulation, tags=["Cities"])
 async def get_city_population(city_name: str):
     """
     Get population data for a specific city.
@@ -105,7 +92,7 @@ async def get_city_population(city_name: str):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@app.get("/population/country/{country_name}/cities", response_model=List[CityPopulation], tags=["Population"])
+@app.get("/country/{country_name}/cities", response_model=List[CityPopulation], tags=["Cities"])
 async def get_cities_in_country(country_name: str):
     """
     Get all cities and their population data for a country.
@@ -127,7 +114,7 @@ async def get_cities_in_country(country_name: str):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@app.get("/population/largest-cities", response_model=List[CityPopulation], tags=["Population"])
+@app.get("/largest-cities", response_model=List[CityPopulation], tags=["Cities"])
 async def get_largest_cities(limit: Optional[int] = 10):
     """
     Get the largest cities by population.
@@ -143,74 +130,6 @@ async def get_largest_cities(limit: Optional[int] = 10):
     """
     try:
         return population.get_largest_cities(limit)
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-
-# Cost of Living endpoints
-@app.post("/cost/populate", response_model=PopulateResponse, tags=["Cost of Living"])
-async def populate_cost():
-    """Populate the database with cost of living data."""
-    try:
-        cost_of_living.populate()
-        return {"status": "success", "message": "Data populated successfully"}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-
-@app.get("/cost/city/{city_name}", response_model=CityCostOfLiving, tags=["Cost of Living"])
-async def get_city_cost(city_name: str):
-    """
-    Get cost of living data for a specific city.
-    
-    Parameters:
-        city_name (str): Name of the city to look up (e.g., 'Hamilton, Bermuda')
-        
-    Returns:
-        CityCostOfLiving: Cost of living details for the specified city
-    """
-    try:
-        result = cost_of_living.get_city_data(city_name)
-        if result is None:
-            raise HTTPException(status_code=404, detail="City not found")
-        return result
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-
-@app.get("/cost/most-expensive-cities", response_model=List[CityCostOfLiving], tags=["Cost of Living"])
-async def get_most_expensive_cities(limit: Optional[int] = 10):
-    """
-    Get the most expensive cities by cost of living index.
-    
-    Parameters:
-        limit (int, optional): Number of cities to return. Defaults to 10.
-    """
-    try:
-        return cost_of_living.get_most_expensive_cities(limit)
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-
-@app.get("/cost/cheapest-cities", response_model=List[CityCostOfLiving], tags=["Cost of Living"])
-async def get_cheapest_cities(limit: Optional[int] = 10):
-    """
-    Get the cheapest cities by cost of living index.
-    
-    Parameters:
-        limit (int, optional): Number of cities to return. Defaults to 10.
-    """
-    try:
-        return cost_of_living.get_cheapest_cities(limit)
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-
-@app.get("/cost/best-value-cities", response_model=List[CityCostOfLiving], tags=["Cost of Living"])
-async def get_best_value_cities(limit: Optional[int] = 10):
-    """
-    Get cities with the best value (highest local purchasing power relative to cost).
-    
-    Parameters:
-        limit (int, optional): Number of cities to return. Defaults to 10.
-    """
-    try:
-        return cost_of_living.get_best_value_cities(limit)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
@@ -235,5 +154,130 @@ async def test_groq_get(query: str):
             "status": "success",
             "response": response
         }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+
+# ===============================
+# Cost_OF_living_Code:   Check this also and add this:
+# ================================
+from dotenv import load_dotenv
+load_dotenv()
+
+from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+import os
+from typing import Optional, List
+from pydantic import BaseModel
+import cost_of_living
+
+# Define response models
+class CityCostOfLiving(BaseModel):
+    city: str
+    cost_of_living_index: float
+    rent_index: float
+    cost_of_living_plus_rent_index: float
+    groceries_index: float
+    restaurant_price_index: float
+    local_purchasing_power_index: float
+
+class Message(BaseModel):
+    message: str
+
+class PopulateResponse(BaseModel):
+    status: str
+    message: str
+
+app = FastAPI(
+    title="Cost of Living API",
+    description="""
+    An API providing cost of living data for cities worldwide.
+    Data source: Your cost of living dataset
+    """,
+    version="1.0.0",
+    contact={
+        "name": "Cost of Living API Team",
+    }
+)
+
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allow_headers=["Content-Type", "Authorization", "X-Requested-With"],
+)
+
+@app.get("/", response_model=Message, tags=["General"])
+async def root():
+    """Welcome endpoint for the Cost of Living API."""
+    return {"message": "Welcome to the Cost of Living API"}
+
+@app.post("/populate", response_model=PopulateResponse, tags=["Data"])
+async def populate():
+    """Populate the database with cost of living data."""
+    try:
+        cost_of_living.populate()
+        return {"status": "success", "message": "Data populated successfully"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/city/{city_name}", response_model=CityCostOfLiving, tags=["Cities"])
+async def get_city_cost(city_name: str):
+    """
+    Get cost of living data for a specific city.
+    
+    Parameters:
+        city_name (str): Name of the city to look up (e.g., 'Hamilton, Bermuda')
+        
+    Returns:
+        CityCostOfLiving: Cost of living details for the specified city
+    """
+    try:
+        result = cost_of_living.get_city_data(city_name)
+        if result is None:
+            raise HTTPException(status_code=404, detail="City not found")
+        return result
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/most-expensive-cities", response_model=List[CityCostOfLiving], tags=["Cities"])
+async def get_most_expensive_cities(limit: Optional[int] = 10):
+    """
+    Get the most expensive cities by cost of living index.
+    
+    Parameters:
+        limit (int, optional): Number of cities to return. Defaults to 10.
+    """
+    try:
+        return cost_of_living.get_most_expensive_cities(limit)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/cheapest-cities", response_model=List[CityCostOfLiving], tags=["Cities"])
+async def get_cheapest_cities(limit: Optional[int] = 10):
+    """
+    Get the cheapest cities by cost of living index.
+    
+    Parameters:
+        limit (int, optional): Number of cities to return. Defaults to 10.
+    """
+    try:
+        return cost_of_living.get_cheapest_cities(limit)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/best-value-cities", response_model=List[CityCostOfLiving], tags=["Cities"])
+async def get_best_value_cities(limit: Optional[int] = 10):
+    """
+    Get cities with the best value (highest local purchasing power relative to cost).
+    
+    Parameters:
+        limit (int, optional): Number of cities to return. Defaults to 10.
+    """
+    try:
+        return cost_of_living.get_best_value_cities(limit)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
