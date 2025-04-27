@@ -1,5 +1,5 @@
 from logging import exception
-import function
+import trip_func
 from fastapi import FastAPI, HTTPException, Query, Path, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
@@ -30,155 +30,6 @@ app.add_middleware(
 # Load sample data
 if not os.path.exists("data"):
     os.makedirs("data")
-
-# Sample data structures
-sample_cities = {
-    "delhi": {
-        "name": "Delhi",
-        "country": "India",
-        "currency": "INR",
-        "transportation": {
-            "auto_rickshaw": {
-                "base_fare": 25,
-                "per_km": 8,
-                "typical_short_trip": "40-60 INR",
-                "typical_medium_trip": "80-120 INR"
-            },
-            "taxi": {
-                "base_fare": 50,
-                "per_km": 14, 
-                "typical_short_trip": "100-150 INR",
-                "typical_medium_trip": "200-300 INR"
-            },
-            "metro": {
-                "base_fare": 10,
-                "typical_trip": "20-40 INR"
-            }
-        },
-        "food": {
-            "street_food": "30-100 INR",
-            "budget_restaurant": "150-300 INR per person",
-            "mid_range_restaurant": "500-1000 INR per person",
-            "luxury_restaurant": "1500+ INR per person"
-        },
-        "accommodation": {
-            "hostel": "300-800 INR per night",
-            "budget_hotel": "800-2000 INR per night",
-            "mid_range_hotel": "2000-5000 INR per night",
-            "luxury_hotel": "5000+ INR per night"
-        },
-        "neighborhoods": {
-            "connaught_place": {
-                "name": "Connaught Place",
-                "safety_rating": 4.2,
-                "safety_notes": "Central business district, generally safe during day, moderate caution at night",
-                "tourist_friendly": 5,
-                "attractions": ["Jantar Mantar", "Palika Bazaar", "Central Park"]
-            },
-            "chandni_chowk": {
-                "name": "Chandni Chowk",
-                "safety_rating": 3.5,
-                "safety_notes": "Crowded historic area, watch for pickpockets, avoid isolated areas at night",
-                "tourist_friendly": 4,
-                "attractions": ["Red Fort", "Jama Masjid", "Spice Market"]
-            },
-            "hauz_khas": {
-                "name": "Hauz Khas",
-                "safety_rating": 4.5,
-                "safety_notes": "Upscale area, generally safe, popular nightlife district",
-                "tourist_friendly": 4.8,
-                "attractions": ["Hauz Khas Fort", "Deer Park", "Trendy Cafes and Boutiques"]
-            }
-        },
-        "attractions": {
-            "red_fort": {
-                "name": "Red Fort",
-                "entry_fee": "45 INR (Indians), 600 INR (Foreigners)",
-                "best_time": "Morning",
-                "avg_time_spent": "2-3 hours"
-            },
-            "qutub_minar": {
-                "name": "Qutub Minar",
-                "entry_fee": "35 INR (Indians), 550 INR (Foreigners)",
-                "best_time": "Late afternoon",
-                "avg_time_spent": "1-2 hours"
-            },
-            "india_gate": {
-                "name": "India Gate",
-                "entry_fee": "Free",
-                "best_time": "Evening",
-                "avg_time_spent": "1 hour"
-            }
-        }
-    },
-    "mumbai": {
-        "name": "Mumbai",
-        "country": "India",
-        "currency": "INR",
-        "transportation": {
-            "auto_rickshaw": {
-                "base_fare": 18,
-                "per_km": 12,
-                "typical_short_trip": "50-80 INR",
-                "typical_medium_trip": "100-150 INR"
-            },
-            "taxi": {
-                "base_fare": 25,
-                "per_km": 16,
-                "typical_short_trip": "80-120 INR",
-                "typical_medium_trip": "150-250 INR"
-            },
-            "local_train": {
-                "base_fare": 5,
-                "typical_trip": "10-30 INR"
-            }
-        },
-        "food": {
-            "street_food": "40-120 INR",
-            "budget_restaurant": "200-400 INR per person",
-            "mid_range_restaurant": "600-1200 INR per person",
-            "luxury_restaurant": "2000+ INR per person"
-        },
-        "accommodation": {
-            "hostel": "400-1000 INR per night",
-            "budget_hotel": "1000-3000 INR per night",
-            "mid_range_hotel": "3000-7000 INR per night",
-            "luxury_hotel": "7000+ INR per night"
-        },
-        "neighborhoods": {
-            "colaba": {
-                "name": "Colaba",
-                "safety_rating": 4.5,
-                "safety_notes": "Tourist-friendly area, generally safe but be cautious in crowded places",
-                "tourist_friendly": 5,
-                "attractions": ["Gateway of India", "Colaba Causeway", "Taj Mahal Palace Hotel"]
-            },
-            "bandra": {
-                "name": "Bandra",
-                "safety_rating": 4.7,
-                "safety_notes": "Upscale residential area, very safe, popular with expats",
-                "tourist_friendly": 4.5,
-                "attractions": ["Bandstand Promenade", "Mount Mary Church", "Bandra-Worli Sea Link"]
-            }
-        },
-        "attractions": {
-            "gateway_of_india": {
-                "name": "Gateway of India",
-                "entry_fee": "Free",
-                "best_time": "Early morning or evening",
-                "avg_time_spent": "1 hour"
-            },
-            "elephanta_caves": {
-                "name": "Elephanta Caves",
-                "entry_fee": "40 INR (Indians), 600 INR (Foreigners)",
-                "ferry_cost": "130-150 INR return trip",
-                "best_time": "Morning",
-                "avg_time_spent": "3-4 hours including ferry ride"
-            }
-        }
-    }
-}
-
 # Load data
 def load_cities():
     with open("data/cities.json", "r") as f:
@@ -214,15 +65,6 @@ def save_json(data: Any, filename: str) -> None:
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=4)        
 
-# Models
-# class SafetyReport(BaseModel):
-#     location: str
-#     neighborhood: str
-#     incident_type: str
-#     description: str
-#     date: str
-#     time: str
-#     severity: int = Field(..., ge=1, le=5)
 
 class TripDay(BaseModel):
     day_number: int
@@ -242,38 +84,6 @@ class Trip(BaseModel):
     total_cost_estimate_inr: float
     created_at: str = Field(default_factory=lambda: datetime.utcnow().isoformat())  
     
-
-# class SafetyRating(BaseModel):
-#     overall: float
-#     day: float
-#     night: float
-#     for_women: float
-#     for_solo_travelers: float
-#     for_families: float
-#     notes: str
-
-# class SafetyMetrics(BaseModel):
-#     overall_safety: float
-#     women_safety: float
-#     transportation_safety: float
-#     night_safety: float
-
-# class SafetyTrip(BaseModel):
-#     trip_id: Optional[str] = None
-#     user: str
-#     city_name: str
-#     state: str
-#     population: int
-#     duration_days: int
-#     places_visited: List[str]
-#     trip_notes: str
-#     travel_mode: str
-#     total_cost_estimate_inr: float
-#     safety_metrics: SafetyMetrics
-#     safe_areas: List[str]
-#     areas_to_avoid: List[str]
-#     emergency_contacts: Dict[str, str]
-#     transportation_tips: List[str]
 
 # API Routes
 @app.get("/")#✔
@@ -460,6 +270,202 @@ def get_trip_suggestions(
     
             print(f"Error getting trip suggestions: {e}")
             raise HTTPException(status_code=500, detail="Internal Server Error")
+    
+
+
+
+
+#post route for trip planning
+
+# Add these models to the existing models section
+
+class SafetyReportCreate(BaseModel):
+    city: str
+    neighborhood: str
+    safety_rating: int = Field(..., ge=1, le=5, description="Safety rating from 1-5")
+    incident_type: Optional[str] = None
+    description: str
+    reported_by: str
+    occurred_at: Optional[str] = Field(default_factory=lambda: datetime.utcnow().isoformat())
+
+class SafetyReport(SafetyReportCreate):
+    report_id: str
+    created_at: str = Field(default_factory=lambda: datetime.utcnow().isoformat())
+
+class SafetyTripCreate(BaseModel):
+    trip_id: str
+    city: str
+    neighborhoods: List[str]
+    duration_days: int
+    travel_mode: str
+    traveler_count: int
+
+class SafetyTripResponse(BaseModel):
+    trip_id: str
+    city: str
+    neighborhoods: List[str]
+    overall_safety_rating: float
+    neighborhood_ratings: Dict[str, float]
+    safety_tips: List[str]
+    created_at: str
+
+
+@app.post("/trips/", response_model=Trip)
+def create_trip(trip: Trip):
+    try:
+        trips = load_trips()
+        
+        
+        if not trip.trip_id:
+            trip.trip_id = str(uuid.uuid4())
+            
+        
+        trip.created_at = datetime.utcnow().isoformat()
+        
+        
+        trips.append(trip.dict())
+        save_trips(trips)
+        
+        return trip
+    except Exception as e:
+        print(f"Error creating trip: {e}")
+        raise HTTPException(status_code=500, detail=f"Internal Server Error: {str(e)}")
+
+@app.post("/safety/reports/", response_model=SafetyReport)
+def create_safety_report(report: SafetyReportCreate):
+    try:
+        reports = load_safety_reports()
+        
+        
+        new_report = SafetyReport(
+            report_id=str(uuid.uuid4()),
+            **report.dict()
+        )
+        
+       
+        reports.append(new_report.dict())
+        save_safety_reports(reports)
+        
+        return new_report
+    except Exception as e:
+        print(f"Error creating safety report: {e}")
+        raise HTTPException(status_code=500, detail=f"Internal Server Error: {str(e)}")
+
+@app.post("/safety/trips/", response_model=SafetyTripResponse)
+def assess_trip_safety(trip_data: SafetyTripCreate):
+    try:
+        safety_reports = load_safety_reports()
+        safety_trips = load_safety_trips()
+        
+        
+        city_reports = [r for r in safety_reports if r["city"].lower() == trip_data.city.lower()]
+        
+        
+        neighborhood_ratings = {}
+        for neighborhood in trip_data.neighborhoods:
+            neighborhood_reports = [r for r in city_reports if r["neighborhood"].lower() == neighborhood.lower()]
+            if neighborhood_reports:
+                avg_rating = sum(r["safety_rating"] for r in neighborhood_reports) / len(neighborhood_reports)
+                neighborhood_ratings[neighborhood] = round(avg_rating, 1)
+            else:
+                
+                neighborhood_ratings[neighborhood] = 3.0
+        
+        
+        overall_rating = sum(neighborhood_ratings.values()) / len(neighborhood_ratings) if neighborhood_ratings else 3.0
+        
+       
+        safety_tips = trip_func.generate_safety_tips(overall_rating, trip_data.city, trip_data.travel_mode)
+        
+       
+        response = SafetyTripResponse(
+            trip_id=trip_data.trip_id,
+            city=trip_data.city,
+            neighborhoods=trip_data.neighborhoods,
+            overall_safety_rating=round(overall_rating, 1),
+            neighborhood_ratings=neighborhood_ratings,
+            safety_tips=safety_tips,
+            created_at=datetime.utcnow().isoformat()
+        )
+        
+       
+        safety_trips.append(response.dict())
+        save_safety_trips(safety_trips)
+        
+        return response
+    except Exception as e:
+        print(f"Error assessing trip safety: {e}")
+        raise HTTPException(status_code=500, detail=f"Internal Server Error: {str(e)}")
+
+@app.post("/trips/{trip_id}/plan", response_model=Trip)
+def generate_trip_plan(
+    trip_id: str = Path(..., description="Trip ID to plan"),
+    budget: float = Query(None, description="Budget in INR"),
+    preferences: List[str] = Query(None, description="Activity preferences")
+):
+    try:
+        trips = load_trips()
+        cities = load_cities()
+        
+        # Find the trip
+        trip = next((t for t in trips if t["trip_id"] == trip_id), None)
+        if not trip:
+            raise HTTPException(status_code=404, detail="Trip not found")
+            
+       
+        city = trip["city"].lower()
+        if city not in cities:
+            raise HTTPException(status_code=404, detail="City not found")
+            
+        city_data = cities[city]
+        
+       
+        planned_trip = trip_func.generate_trip_plan(
+            trip=trip,
+            city_data=city_data,
+            budget=budget,
+            preferences=preferences or []
+        )
+        
+        # Update the trip
+        for i, t in enumerate(trips):
+            if t["trip_id"] == trip_id:
+                trips[i] = planned_trip
+                break
+                
+        save_trips(trips)
+        
+        return Trip(**planned_trip)
+    except Exception as e:
+        print(f"Error generating trip plan: {e}")
+        raise HTTPException(status_code=500, detail=f"Internal Server Error: {str(e)}")
+
+@app.put("/trips/{trip_id}", response_model=Trip)
+def update_trip(trip_id: str, updated_trip: Trip):
+    try:
+        trips = load_trips()
+        
+      
+        trip_index = next((i for i, t in enumerate(trips) if t["trip_id"] == trip_id), None)
+        if trip_index is None:
+            raise HTTPException(status_code=404, detail="Trip not found")
+            
+        
+        updated_trip.trip_id = trip_id
+        
+       
+        trips[trip_index] = updated_trip.dict()
+        save_trips(trips)
+        
+        return updated_trip
+    except Exception as e:
+        print(f"Error updating trip: {e}")
+        raise HTTPException(status_code=500, detail=f"Internal Server Error: {str(e)}")
+
+
+
+
+
 # Run the application
 if __name__ == "__main__":
     import uvicorn
