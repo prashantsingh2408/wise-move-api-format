@@ -1,0 +1,550 @@
+[
+    {
+      "trip_id": "1",
+      "city": "Delhi",
+      "user": "john_doe",
+      "duration_days": 3,
+      "places_visited": ["Red Fort", "India Gate", "Connaught Place"],
+      "trip_notes": "Great historic spots, local food was amazing!",
+      "travel_mode": "metro",
+      "total_cost_estimate_inr": 3500
+    },
+    {
+      "trip_id": "2",
+      "city": "Mumbai",
+      "user": "jane_smith",
+      "duration_days": 2,
+      "places_visited": ["Gateway of India", "Colaba", "Bandra"],
+      "trip_notes": "Loved the sea breeze and street food!",
+      "travel_mode": "local_train",
+      "total_cost_estimate_inr": 4200
+    },
+    {
+      "trip_id": "3",
+      "city": "Delhi",
+      "user": "alex_rai",
+      "duration_days": 4,
+      "places_visited": ["Qutub Minar", "Hauz Khas", "Chandni Chowk"],
+      "trip_notes": "A mix of heritage and hipster vibes!",
+      "travel_mode": "auto_rickshaw",
+      "total_cost_estimate_inr": 5000
+    },
+    {
+      "trip_id": "4",
+      "city": "Bangalore",
+      "user": "priya_verma",
+      "duration_days": 3,
+      "places_visited": ["Cubbon Park", "UB City", "Lalbagh"],
+      "trip_notes": "Perfect mix of greenery and urban life!",
+      "travel_mode": "cab",
+      "total_cost_estimate_inr": 6500
+    },
+    {
+      "trip_id": "5",
+      "city": "Jaipur",
+      "user": "robert_chen",
+      "duration_days": 4,
+      "places_visited": ["Hawa Mahal", "Amber Fort", "City Palace"],
+      "trip_notes": "Pink city has such incredible architecture!",
+      "travel_mode": "tourist_bus",
+      "total_cost_estimate_inr": 5800
+    },
+    {
+      "trip_id": "6",
+      "city": "Chennai",
+      "user": "aarav_khanna",
+      "duration_days": 2,
+      "places_visited": ["Marina Beach", "Kapaleeshwarar Temple", "Phoenix Mall"],
+      "trip_notes": "Great coastal city with rich cultural heritage",
+      "travel_mode": "bus",
+      "total_cost_estimate_inr": 4000
+    },
+    {
+      "trip_id": "7",
+      "city": "Kolkata",
+      "user": "lisa_wong",
+      "duration_days": 5,
+      "places_visited": ["Victoria Memorial", "Howrah Bridge", "Park Street"],
+      "trip_notes": "Such a charming city with colonial architecture",
+      "travel_mode": "tram",
+      "total_cost_estimate_inr": 7200
+    },
+    {
+      "trip_id": "8",
+      "city": "Hyderabad",
+      "user": "mike_johnson",
+      "duration_days": 3,
+      "places_visited": ["Charminar", "Golconda Fort", "Hussain Sagar"],
+      "trip_notes": "Perfect blend of history and modern tech hub!",
+      "travel_mode": "metro",
+      "total_cost_estimate_inr": 5300
+    },
+    {
+      "trip_id": "9",
+      "city": "Varanasi",
+      "user": "emily_parker",
+      "duration_days": 4,
+      "places_visited": ["Dashashwamedh Ghat", "Kashi Vishwanath Temple", "Sarnath"],
+      "trip_notes": "Spiritual journey along the Ganges was life-changing",
+      "travel_mode": "walking",
+      "total_cost_estimate_inr": 6000
+    },
+    {
+      "trip_id": "10",
+      "city": "Goa",
+      "user": "tom_cruz",
+      "duration_days": 6,
+      "places_visited": ["Calangute Beach", "Anjuna Flea Market", "Basilica of Bom Jesus"],
+      "trip_notes": "Perfect beach vacation with great nightlife!",
+      "travel_mode": "scooter",
+      "total_cost_estimate_inr": 9500
+    },
+    {
+      "trip_id": "11",
+      "city": "Amritsar",
+      "user": "sarah_williams",
+      "duration_days": 2,
+      "places_visited": ["Golden Temple", "Jallianwala Bagh", "Wagah Border"],
+      "trip_notes": "Incredible spiritual experience and patriotic border ceremony",
+      "travel_mode": "taxi",
+      "total_cost_estimate_inr": 4800
+    },
+    {
+      "trip_id": "12",
+      "city": "Agra",
+      "user": "david_wilson",
+      "duration_days": 2,
+      "places_visited": ["Taj Mahal", "Agra Fort", "Fatehpur Sikri"],
+      "trip_notes": "Taj Mahal at sunrise was breathtaking!",
+      "travel_mode": "tourist_bus",
+      "total_cost_estimate_inr": 5200
+    },
+    {
+      "trip_id": "13",
+      "city": "Udaipur",
+      "user": "lily_chen",
+      "duration_days": 4,
+      "places_visited": ["City Palace", "Lake Pichola", "Saheliyon Ki Bari"],
+      "trip_notes": "The most romantic city with beautiful lakes and palaces",
+      "travel_mode": "auto_rickshaw",
+      "total_cost_estimate_inr": 7000
+    },
+    {
+      "trip_id": "14",
+      "city": "Kochi",
+      "user": "james_taylor",
+      "duration_days": 3,
+      "places_visited": ["Fort Kochi", "Chinese Fishing Nets", "Mattancherry Palace"],
+      "trip_notes": "Coastal paradise with amazing seafood and culture",
+      "travel_mode": "ferry",
+      "total_cost_estimate_inr": 5500
+    },
+    {
+      "trip_id": "15",
+      "city": "Shimla",
+      "user": "anjali_mehta",
+      "duration_days": 5,
+      "places_visited": ["The Ridge", "Mall Road", "Kufri"],
+      "trip_notes": "Perfect mountain retreat with colonial charm",
+      "travel_mode": "toy_train",
+      "total_cost_estimate_inr": 8200
+    },{
+      "trip_id": "16",
+      "city": "Bangkok",
+      "user": "ryan_cooper",
+      "duration_days": 4,
+      "places_visited": ["Grand Palace", "Wat Arun", "Chatuchak Market"],
+      "trip_notes": "Amazing street food and temples everywhere!",
+      "travel_mode": "tuk_tuk",
+      "total_cost_estimate_inr": 25000
+    },
+    {
+      "trip_id": "17",
+      "city": "Singapore",
+      "user": "nina_patel",
+      "duration_days": 3,
+      "places_visited": ["Gardens by the Bay", "Marina Bay Sands", "Sentosa Island"],
+      "trip_notes": "Ultra-modern city with perfect cleanliness and efficiency",
+      "travel_mode": "mrt",
+      "total_cost_estimate_inr": 35000
+    },
+    {
+      "trip_id": "18",
+      "city": "Tokyo",
+      "user": "mark_anderson",
+      "duration_days": 7,
+      "places_visited": ["Shibuya Crossing", "Senso-ji Temple", "Tokyo Skytree"],
+      "trip_notes": "Perfect blend of tradition and futuristic technology",
+      "travel_mode": "subway",
+      "total_cost_estimate_inr": 85000
+    },
+    {
+      "trip_id": "19",
+      "city": "Bali",
+      "user": "olivia_green",
+      "duration_days": 6,
+      "places_visited": ["Ubud Monkey Forest", "Tanah Lot", "Kuta Beach"],
+      "trip_notes": "Spiritual island paradise with amazing scenery",
+      "travel_mode": "scooter",
+      "total_cost_estimate_inr": 45000
+    },
+    {
+      "trip_id": "20",
+      "city": "Dubai",
+      "user": "hassan_ali",
+      "duration_days": 5,
+      "places_visited": ["Burj Khalifa", "Palm Jumeirah", "Dubai Mall"],
+      "trip_notes": "Luxurious desert city with incredible architecture",
+      "travel_mode": "metro",
+      "total_cost_estimate_inr": 65000
+    },
+    {
+      "trip_id": "21",
+      "city": "Paris",
+      "user": "sophie_martin",
+      "duration_days": 6,
+      "places_visited": ["Eiffel Tower", "Louvre Museum", "Notre Dame"],
+      "trip_notes": "The city of love lived up to its reputation!",
+      "travel_mode": "metro",
+      "total_cost_estimate_inr": 80000
+    },
+    {
+      "trip_id": "22",
+      "city": "Rome",
+      "user": "marco_rossi",
+      "duration_days": 5,
+      "places_visited": ["Colosseum", "Vatican City", "Trevi Fountain"],
+      "trip_notes": "Walking through history with amazing pasta!",
+      "travel_mode": "walking",
+      "total_cost_estimate_inr": 70000
+    },
+    {
+      "trip_id": "23",
+      "city": "London",
+      "user": "ben_hughes",
+      "duration_days": 7,
+      "places_visited": ["Big Ben", "British Museum", "Buckingham Palace"],
+      "trip_notes": "Perfect city break with great museums and pubs",
+      "travel_mode": "tube",
+      "total_cost_estimate_inr": 90000
+    },
+    {
+      "trip_id": "24",
+      "city": "New York",
+      "user": "jessica_brown",
+      "duration_days": 6,
+      "places_visited": ["Times Square", "Central Park", "Empire State Building"],
+      "trip_notes": "The city that never sleeps really doesn't!",
+      "travel_mode": "subway",
+      "total_cost_estimate_inr": 120000
+    },
+    {
+      "trip_id": "25",
+      "city": "Amsterdam",
+      "user": "lucas_van_der_berg",
+      "duration_days": 4,
+      "places_visited": ["Anne Frank House", "Van Gogh Museum", "Canal Cruise"],
+      "trip_notes": "Beautiful canal city with rich history and culture",
+      "travel_mode": "bicycle",
+      "total_cost_estimate_inr": 65000
+    },
+    {
+      "trip_id": "26",
+      "city": "Barcelona",
+      "user": "elena_rodriguez",
+      "duration_days": 5,
+      "places_visited": ["Sagrada Familia", "Park Güell", "La Rambla"],
+      "trip_notes": "Gaudi's architecture made this trip unforgettable",
+      "travel_mode": "metro",
+      "total_cost_estimate_inr": 60000
+    },
+    {
+      "trip_id": "27",
+      "city": "Sydney",
+      "user": "jack_thompson",
+      "duration_days": 8,
+      "places_visited": ["Sydney Opera House", "Bondi Beach", "Harbour Bridge"],
+      "trip_notes": "Beautiful harbor city with fantastic beaches",
+      "travel_mode": "ferry",
+      "total_cost_estimate_inr": 110000
+    },
+    {
+      "trip_id": "28",
+      "city": "Cairo",
+      "user": "fatima_hassan",
+      "duration_days": 6,
+      "places_visited": ["Pyramids of Giza", "Egyptian Museum", "Khan el-Khalili"],
+      "trip_notes": "Ancient wonders and bustling markets were amazing",
+      "travel_mode": "guided_tour",
+      "total_cost_estimate_inr": 55000
+    },
+    {
+      "trip_id": "29",
+      "city": "Istanbul",
+      "user": "kemal_yilmaz",
+      "duration_days": 5,
+      "places_visited": ["Hagia Sophia", "Blue Mosque", "Grand Bazaar"],
+      "trip_notes": "Perfect blend of Europe and Asia in one city",
+      "travel_mode": "tram",
+      "total_cost_estimate_inr": 50000
+    },
+    {
+      "trip_id": "30",
+      "city": "Cape Town",
+      "user": "noah_adams",
+      "duration_days": 7,
+      "places_visited": ["Table Mountain", "Robben Island", "V&A Waterfront"],
+      "trip_notes": "Spectacular mountain and ocean views everywhere",
+      "travel_mode": "rental_car",
+      "total_cost_estimate_inr": 80000
+    },
+    {
+      "trip_id": "31",
+      "city": "Ooty",
+      "user": "ravi_kumar",
+      "duration_days": 3,
+      "places_visited": ["Botanical Gardens", "Doddabetta Peak", "Ooty Lake"],
+      "trip_notes": "Beautiful hill station with perfect weather",
+      "travel_mode": "toy_train",
+      "total_cost_estimate_inr": 8000
+    },
+    {
+      "trip_id": "32",
+      "city": "Darjeeling",
+      "user": "amit_sen",
+      "duration_days": 4,
+      "places_visited": ["Tiger Hill", "Batasia Loop", "Tea Gardens"],
+      "trip_notes": "Amazing tea and Himalayan views were unforgettable",
+      "travel_mode": "shared_jeep",
+      "total_cost_estimate_inr": 9500
+    },
+    {
+      "trip_id": "33",
+      "city": "Mysore",
+      "user": "deepa_nair",
+      "duration_days": 2,
+      "places_visited": ["Mysore Palace", "Chamundi Hill", "Devaraja Market"],
+      "trip_notes": "Royal heritage city with beautiful architecture",
+      "travel_mode": "auto_rickshaw",
+      "total_cost_estimate_inr": 4500
+    },
+    {
+      "trip_id": "34",
+      "city": "Rishikesh",
+      "user": "michael_smith",
+      "duration_days": 5,
+      "places_visited": ["Laxman Jhula", "Triveni Ghat", "Beatles Ashram"],
+      "trip_notes": "Spiritual journey and adventure sports by the Ganges",
+      "travel_mode": "walking",
+      "total_cost_estimate_inr": 7500
+    },
+    {
+      "trip_id": "35",
+      "city": "Pushkar",
+      "user": "claire_wright",
+      "duration_days": 3,
+      "places_visited": ["Pushkar Lake", "Brahma Temple", "Camel Safari"],
+      "trip_notes": "Spiritual oasis in the desert with great atmosphere",
+      "travel_mode": "camel",
+      "total_cost_estimate_inr": 6000
+    },
+    {
+      "trip_id": "36",
+      "city": "Munnar",
+      "user": "rohan_joshi",
+      "duration_days": 4,
+      "places_visited": ["Tea Plantations", "Eravikulam National Park", "Mattupetty Dam"],
+      "trip_notes": "Beautiful tea gardens on rolling hills with cool climate",
+      "travel_mode": "taxi",
+      "total_cost_estimate_inr": 12000
+    },
+    {
+      "trip_id": "37",
+      "city": "Leh",
+      "user": "zara_khan",
+      "duration_days": 7,
+      "places_visited": ["Pangong Lake", "Shanti Stupa", "Nubra Valley"],
+      "trip_notes": "Breathtaking landscapes and Buddhist culture",
+      "travel_mode": "bike",
+      "total_cost_estimate_inr": 18000
+    },
+    {
+      "trip_id": "38",
+      "city": "Hampi",
+      "user": "gabriel_costa",
+      "duration_days": 3,
+      "places_visited": ["Virupaksha Temple", "Hampi Bazaar", "Elephant Stables"],
+      "trip_notes": "Ancient ruins in surreal boulder landscapes",
+      "travel_mode": "bicycle",
+      "total_cost_estimate_inr": 5000
+    },
+    {
+      "trip_id": "39",
+      "city": "Pondicherry",
+      "user": "isabelle_dupont",
+      "duration_days": 4,
+      "places_visited": ["Auroville", "Promenade Beach", "French Quarter"],
+      "trip_notes": "French colonial charm with spiritual vibe",
+      "travel_mode": "scooter",
+      "total_cost_estimate_inr": 9000
+    },
+    {
+      "trip_id": "40",
+      "city": "Andaman Islands",
+      "user": "rahul_sharma",
+      "duration_days": 6,
+      "places_visited": ["Radhanagar Beach", "Cellular Jail", "Havelock Island"],
+      "trip_notes": "Paradise beaches with crystal clear waters",
+      "travel_mode": "ferry",
+      "total_cost_estimate_inr": 25000
+    },
+    {
+      "trip_id": "41",
+      "city": "Rio de Janeiro",
+      "user": "mateo_santos",
+      "duration_days": 7,
+      "places_visited": ["Christ the Redeemer", "Copacabana Beach", "Sugarloaf Mountain"],
+      "trip_notes": "Beautiful beaches surrounded by dramatic mountains",
+      "travel_mode": "metro",
+      "total_cost_estimate_inr": 95000
+    },
+    {
+      "trip_id": "42",
+      "city": "Mexico City",
+      "user": "sofia_lopez",
+      "duration_days": 6,
+      "places_visited": ["Frida Kahlo Museum", "Templo Mayor", "Chapultepec Castle"],
+      "trip_notes": "Rich history and amazing food scene everywhere",
+      "travel_mode": "uber",
+      "total_cost_estimate_inr": 70000
+    },
+    {
+      "trip_id": "43",
+      "city": "Buenos Aires",
+      "user": "lucas_garcia",
+      "duration_days": 5,
+      "places_visited": ["Casa Rosada", "La Recoleta Cemetery", "La Boca"],
+      "trip_notes": "Vibrant city with European architecture and tango",
+      "travel_mode": "subway",
+      "total_cost_estimate_inr": 80000
+    },
+    {
+      "trip_id": "44",
+      "city": "Santiago",
+      "user": "ana_martinez",
+      "duration_days": 4,
+      "places_visited": ["Santa Lucia Hill", "Plaza de Armas", "Costanera Center"],
+      "trip_notes": "Modern city surrounded by snow-capped Andes",
+      "travel_mode": "metro",
+      "total_cost_estimate_inr": 75000
+    },
+    {
+      "trip_id": "45",
+      "city": "Marrakech",
+      "user": "omar_ben_salah",
+      "duration_days": 5,
+      "places_visited": ["Jemaa el-Fnaa", "Bahia Palace", "Majorelle Garden"],
+      "trip_notes": "Sensory overload in the best possible way",
+      "travel_mode": "walking",
+      "total_cost_estimate_inr": 60000
+    },
+    {
+      "trip_id": "46",
+      "city": "Nairobi",
+      "user": "amara_okafor",
+      "duration_days": 6,
+      "places_visited": ["Nairobi National Park", "Giraffe Centre", "Karen Blixen Museum"],
+      "trip_notes": "Wildlife in the city and amazing safaris nearby",
+      "travel_mode": "matatu",
+      "total_cost_estimate_inr": 65000
+    },
+    {
+      "trip_id": "47",
+      "city": "Copenhagen",
+      "user": "lars_nielsen",
+        "duration_days": 4,
+        "places_visited": ["Tivoli Gardens", "Nyhavn", "Little Mermaid"],
+        "trip_notes": "Charming city with beautiful canals and parks",
+        "travel_mode": "bicycle",
+        "total_cost_estimate_inr": 70000
+    },
+    {
+      "trip_id": "48",
+      "city": "Stockholm",
+      "user": "elena_svensson",
+        "duration_days": 5,
+        "places_visited": ["Vasa Museum", "Gamla Stan", "Skansen"],
+        "trip_notes": "Beautiful archipelago city with rich history",
+        "travel_mode": "ferry",
+        "total_cost_estimate_inr": 80000
+    },
+    {
+      "trip_id": "49",
+      "city": "Oslo",
+      "user": "karl_berg",
+        "duration_days": 4,
+        "places_visited": ["Vigeland Park", "Oslo Opera House", "Akershus Fortress"],
+        "trip_notes": "Beautiful fjords and modern architecture",
+        "travel_mode": "metro",
+        "total_cost_estimate_inr": 90000
+    },
+    {
+      "trip_id": "50",
+      "city": "Helsinki",
+      "user": "sari_makela",
+        "duration_days": 3,
+        "places_visited": ["Suomenlinna", "Helsinki Cathedral", "Market Square"],
+        "trip_notes": "Beautiful coastal city with unique architecture",
+        "travel_mode": "tram",
+        "total_cost_estimate_inr": 60000
+    },
+    {
+      "trip_id": "51",
+      "city": "Lisbon",
+      "user": "joao_silva",
+        "duration_days": 5,
+        "places_visited": ["Belem Tower", "Alfama District", "Sintra"],
+        "trip_notes": "Beautiful coastal city with rich history and culture",
+        "travel_mode": "tram",
+        "total_cost_estimate_inr": 70000
+    },
+    {
+      "trip_id": "52",
+      "city": "Budapest",
+      "user": "anna_kovacs",
+        "duration_days": 4,
+        "places_visited": ["Buda Castle", "Széchenyi Thermal Bath", "Danube River"],
+        "trip_notes": "Beautiful city with stunning architecture and thermal baths",
+        "travel_mode": "metro",
+        "total_cost_estimate_inr": 65000
+    },  
+    {
+      "trip_id": "53",
+      "city": "Prague",
+      "user": "petr_novak",
+        "duration_days": 5,
+        "places_visited": ["Charles Bridge", "Prague Castle", "Old Town Square"],
+        "trip_notes": "Beautiful city with rich history and stunning architecture",
+        "travel_mode": "tram",
+        "total_cost_estimate_inr": 70000
+    },
+    {
+      "trip_id": "54",
+      "city": "Vienna",
+      "user": "lena_mayer",
+        "duration_days": 4,
+        "places_visited": ["Schönbrunn Palace", "St. Stephen's Cathedral", "Belvedere Palace"],
+        "trip_notes": "Beautiful city with rich history and stunning architecture",
+        "travel_mode": "metro",
+        "total_cost_estimate_inr": 80000
+    },
+    {
+      "trip_id": "55",
+      "city": "Zurich",
+      "user": "maximilian_schmidt",
+        "duration_days": 3,
+        "places_visited": ["Lake Zurich", "Old Town", "Bahnhofstrasse"],
+        "trip_notes": "Beautiful city with stunning lake views and shopping",
+        "travel_mode": "tram",
+        "total_cost_estimate_inr": 90000
+    }]

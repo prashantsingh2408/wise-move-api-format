@@ -1,0 +1,353 @@
+{
+    "delhi": {
+        "name": "Delhi",
+        "country": "India",
+        "currency": "INR",
+        "transportation": {
+            "auto_rickshaw": {
+                "base_fare": 25,
+                "per_km": 8,
+                "typical_short_trip": "40-60 INR",
+                "typical_medium_trip": "80-120 INR"
+            },
+            "taxi": {
+                "base_fare": 50,
+                "per_km": 14,
+                "typical_short_trip": "100-150 INR",
+                "typical_medium_trip": "200-300 INR"
+            },
+            "metro": {
+                "base_fare": 10,
+                "typical_trip": "20-40 INR"
+            }
+        },
+        "food": {
+            "street_food": "30-100 INR",
+            "budget_restaurant": "150-300 INR per person",
+            "mid_range_restaurant": "500-1000 INR per person",
+            "luxury_restaurant": "1500+ INR per person"
+        },
+        "accommodation": {
+            "hostel": "300-800 INR per night",
+            "budget_hotel": "800-2000 INR per night",
+            "mid_range_hotel": "2000-5000 INR per night",
+            "luxury_hotel": "5000+ INR per night"
+        },
+        "neighborhoods": {
+            "connaught_place": {
+                "name": "Connaught Place",
+                "safety_rating": 4.2,
+                "safety_notes": "Central business district, generally safe during day, moderate caution at night",
+                "tourist_friendly": 5,
+                "attractions": [
+                    "Jantar Mantar",
+                    "Palika Bazaar",
+                    "Central Park"
+                ]
+            },
+            "chandni_chowk": {
+                "name": "Chandni Chowk",
+                "safety_rating": 3.5,
+                "safety_notes": "Crowded historic area, watch for pickpockets, avoid isolated areas at night",
+                "tourist_friendly": 4,
+                "attractions": [
+                    "Red Fort",
+                    "Jama Masjid",
+                    "Spice Market"
+                ]
+            },
+            "hauz_khas": {
+                "name": "Hauz Khas",
+                "safety_rating": 4.5,
+                "safety_notes": "Upscale area, generally safe, popular nightlife district",
+                "tourist_friendly": 4.8,
+                "attractions": [
+                    "Hauz Khas Fort",
+                    "Deer Park",
+                    "Trendy Cafes and Boutiques"
+                ]
+            }
+        },
+        "attractions": {
+            "red_fort": {
+                "name": "Red Fort",
+                "entry_fee": "45 INR (Indians), 600 INR (Foreigners)",
+                "best_time": "Morning",
+                "avg_time_spent": "2-3 hours"
+            },
+            "qutub_minar": {
+                "name": "Qutub Minar",
+                "entry_fee": "35 INR (Indians), 550 INR (Foreigners)",
+                "best_time": "Late afternoon",
+                "avg_time_spent": "1-2 hours"
+            },
+            "india_gate": {
+                "name": "India Gate",
+                "entry_fee": "Free",
+                "best_time": "Evening",
+                "avg_time_spent": "1 hour"
+            }
+        }
+    },
+    "mumbai": {
+        "name": "Mumbai",
+        "country": "India",
+        "currency": "INR",
+        "transportation": {
+            "auto_rickshaw": {
+                "base_fare": 18,
+                "per_km": 12,
+                "typical_short_trip": "50-80 INR",
+                "typical_medium_trip": "100-150 INR"
+            },
+            "taxi": {
+                "base_fare": 25,
+                "per_km": 16,
+                "typical_short_trip": "80-120 INR",
+                "typical_medium_trip": "150-250 INR"
+            },
+            "local_train": {
+                "base_fare": 5,
+                "typical_trip": "10-30 INR"
+            }
+        },
+        "food": {
+            "street_food": "40-120 INR",
+            "budget_restaurant": "200-400 INR per person",
+            "mid_range_restaurant": "600-1200 INR per person",
+            "luxury_restaurant": "2000+ INR per person"
+        },
+        "accommodation": {
+            "hostel": "400-1000 INR per night",
+            "budget_hotel": "1000-3000 INR per night",
+            "mid_range_hotel": "3000-7000 INR per night",
+            "luxury_hotel": "7000+ INR per night"
+        },
+        "neighborhoods": {
+            "colaba": {
+                "name": "Colaba",
+                "safety_rating": 4.5,
+                "safety_notes": "Tourist-friendly area, generally safe but be cautious in crowded places",
+                "tourist_friendly": 5,
+                "attractions": [
+                    "Gateway of India",
+                    "Colaba Causeway",
+                    "Taj Mahal Palace Hotel"
+                ]
+            },
+            "bandra": {
+                "name": "Bandra",
+                "safety_rating": 4.7,
+                "safety_notes": "Upscale residential area, very safe, popular with expats",
+                "tourist_friendly": 4.5,
+                "attractions": [
+                    "Bandstand Promenade",
+                    "Mount Mary Church",
+                    "Bandra-Worli Sea Link"
+                ]
+            }
+        },
+        "attractions": {
+            "gateway_of_india": {
+                "name": "Gateway of India",
+                "entry_fee": "Free",
+                "best_time": "Early morning or evening",
+                "avg_time_spent": "1 hour"
+            },
+            "elephanta_caves": {
+                "name": "Elephanta Caves",
+                "entry_fee": "40 INR (Indians), 600 INR (Foreigners)",
+                "ferry_cost": "130-150 INR return trip",
+                "best_time": "Morning",
+                "avg_time_spent": "3-4 hours including ferry ride"
+            
+            }
+        }
+    },
+    "bangalore": {
+        "name": "Bangalore",
+        "country": "India",
+        "currency": "INR",
+        "transportation": {
+            "auto_rickshaw": {
+                "base_fare": 30,
+                "per_km": 15,
+                "typical_short_trip": "60-90 INR",
+                "typical_medium_trip": "120-180 INR"
+            },
+            "taxi": {
+                "base_fare": 75,
+                "per_km": 18,
+                "typical_short_trip": "150-200 INR",
+                "typical_medium_trip": "300-400 INR"
+            },
+            "metro": {
+                "base_fare": 15,
+                "typical_trip": "20-50 INR"
+            }
+        },
+        "food": {
+            "street_food": "40-120 INR",
+            "budget_restaurant": "200-400 INR per person",
+            "mid_range_restaurant": "600-1200 INR per person",
+            "luxury_restaurant": "2000+ INR per person"
+        },
+        "accommodation": {
+            "hostel": "400-900 INR per night",
+            "budget_hotel": "1200-2500 INR per night",
+            "mid_range_hotel": "2500-6000 INR per night",
+            "luxury_hotel": "6000+ INR per night"
+        },
+        "neighborhoods": {
+            "indiranagar": {
+                "name": "Indiranagar",
+                "safety_rating": 4.6,
+                "safety_notes": "Upscale area with great nightlife, generally very safe",
+                "tourist_friendly": 4.7,
+                "attractions": [
+                    "100 Feet Road",
+                    "Numerous microbreweries",
+                    "Shopping boutiques"
+                ]
+            },
+            "koramangala": {
+                "name": "Koramangala",
+                "safety_rating": 4.5,
+                "safety_notes": "Tech hub with great food scene, safe for tourists",
+                "tourist_friendly": 4.3,
+                "attractions": [
+                    "Forum Mall",
+                    "National Games Village",
+                    "Diverse restaurants"
+                ]
+            },
+            "cubbon_park_area": {
+                "name": "Cubbon Park Area",
+                "safety_rating": 4.4,
+                "safety_notes": "Central area with government buildings, safe during day, moderate caution at night",
+                "tourist_friendly": 4.8,
+                "attractions": [
+                    "Cubbon Park",
+                    "Vidhana Soudha",
+                    "Bangalore Palace"
+                ]
+            }
+        },
+        "attractions": {
+            "lalbagh_botanical_garden": {
+                "name": "Lalbagh Botanical Garden",
+                "entry_fee": "30 INR (Indians), 100 INR (Foreigners)",
+                "best_time": "Morning or evening",
+                "avg_time_spent": "2-3 hours"
+            },
+            "bangalore_palace": {
+                "name": "Bangalore Palace",
+                "entry_fee": "230 INR (Indians), 460 INR (Foreigners)",
+                "best_time": "Morning",
+                "avg_time_spent": "1-2 hours"
+            },
+            "iskcon_temple": {
+                "name": "ISKCON Temple",
+                "entry_fee": "Free",
+                "best_time": "Evening (for aarti ceremony)",
+                "avg_time_spent": "1-2 hours"
+            }
+        }
+    },
+    "jaipur": {
+        "name": "Jaipur",
+        "country": "India",
+        "currency": "INR",
+        "transportation": {
+            "auto_rickshaw": {
+                "base_fare": 22,
+                "per_km": 10,
+                "typical_short_trip": "50-70 INR",
+                "typical_medium_trip": "100-140 INR"
+            },
+            "taxi": {
+                "base_fare": 60,
+                "per_km": 12,
+                "typical_short_trip": "120-180 INR",
+                "typical_medium_trip": "250-350 INR"
+            },
+            "city_bus": {
+                "base_fare": 10,
+                "typical_trip": "15-25 INR"
+            }
+        },
+        "food": {
+            "street_food": "30-100 INR",
+            "budget_restaurant": "150-300 INR per person",
+            "mid_range_restaurant": "400-800 INR per person",
+            "luxury_restaurant": "1200+ INR per person"
+        },
+        "accommodation": {
+            "hostel": "250-700 INR per night",
+            "budget_hotel": "700-1800 INR per night",
+            "mid_range_hotel": "1800-4500 INR per night",
+            "luxury_hotel": "4500+ INR per night"
+        },
+        "neighborhoods": {
+            "pink_city": {
+                "name": "Pink City (Old City)",
+                "safety_rating": 4.0,
+                "safety_notes": "Tourist area, watch for scams and pickpockets in crowded markets",
+                "tourist_friendly": 4.8,
+                "attractions": [
+                    "Hawa Mahal",
+                    "City Palace",
+                    "Jantar Mantar"
+                ]
+            },
+            "c_scheme": {
+                "name": "C-Scheme",
+                "safety_rating": 4.5,
+                "safety_notes": "Upscale residential and commercial area, generally safe",
+                "tourist_friendly": 4.2,
+                "attractions": [
+                    "Central Park",
+                    "Rajmandir Cinema",
+                    "Upscale restaurants"
+                ]
+            },
+            "bani_park": {
+                "name": "Bani Park",
+                "safety_rating": 4.3,
+                "safety_notes": "Quiet residential area with heritage hotels, very safe",
+                "tourist_friendly": 4.0,
+                "attractions": [
+                    "Heritage hotels",
+                    "Peaceful atmosphere",
+                    "Local markets"
+                ]
+            }
+        },
+        "attractions": {
+            "amber_fort": {
+                "name": "Amber Fort",
+                "entry_fee": "200 INR (Indians), 500 INR (Foreigners)",
+                "best_time": "Morning",
+                "avg_time_spent": "2-3 hours"
+            },
+            "city_palace": {
+                "name": "City Palace",
+                "entry_fee": "200 INR (Indians), 700 INR (Foreigners)",
+                "best_time": "Morning or afternoon",
+                "avg_time_spent": "2 hours"
+            },
+            "hawa_mahal": {
+                "name": "Hawa Mahal",
+                "entry_fee": "50 INR (Indians), 200 INR (Foreigners)",
+                "best_time": "Morning (for best light)",
+                "avg_time_spent": "1 hour"
+            },
+            "jantar_mantar": {
+                "name": "Jantar Mantar",
+                "entry_fee": "50 INR (Indians), 200 INR (Foreigners)",
+                "best_time": "Morning or late afternoon",
+                "avg_time_spent": "1-2 hours"
+            }
+        }
+    }
+}
