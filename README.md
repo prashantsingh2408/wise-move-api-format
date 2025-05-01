@@ -1,5 +1,10 @@
 # Wise Move APIs
 
+## Other repos
+- [wise-move-landing-page](https://github.com/prashantsingh2408/wise-move-landing-page)
+- [chat-app-ui](https://github.com/prashantsingh2408/chat-app-ui)
+- [chat-app-wise-move-api](https://github.com/prashantsingh2408/chat-app-wise-move-api)
+
 [prompt](PROMPT.md)
 
 # Setup
