@@ -1,0 +1,256 @@
+{
+    "safe_trips_data": {
+      "metadata": {
+        "description": "Safety ratings and information for travelers in major Indian cities",
+        "last_updated": "2024-10-15",
+        "rating_scale": {
+          "overall_safety": "1-10 (10 being safest)",
+          "women_safety": "1-10 (10 being safest)",
+          "transportation_safety": "1-10 (10 being safest)",
+          "night_safety": "1-10 (10 being safest)"
+        }
+      },
+      "cities": [
+        {
+          "city_name": "Mumbai",
+          "state": "Maharashtra",
+          "population": 20411274,
+          "safety_metrics": {
+            "overall_safety": 7.2,
+            "women_safety": 6.5,
+            "transportation_safety": 7.8,
+            "night_safety": 6.4
+          },
+          "safe_areas": ["Colaba", "Bandra West", "Powai", "Marine Drive"],
+          "areas_to_avoid": ["Dharavi after dark", "Kamathipura", "Some parts of Kurla"],
+          "emergency_contacts": {
+            "police": "100",
+            "ambulance": "108",
+            "women_helpline": "1091",
+            "tourist_police": "022-22633333"
+          },
+          "transportation_tips": [
+            "Use official taxi services or ride-hailing apps",
+            "Local trains are crowded during peak hours",
+            "Keep valuables secure in public transport"
+          ]
+        },
+        {
+          "city_name": "Delhi",
+          "state": "Delhi NCR",
+          "population": 16787941,
+          "safety_metrics": {
+            "overall_safety": 5.8,
+            "women_safety": 5.2,
+            "transportation_safety": 6.5,
+            "night_safety": 5.0
+          },
+          "safe_areas": ["Connaught Place", "South Delhi", "Lodhi Colony", "Dwarka"],
+          "areas_to_avoid": ["Certain parts of Old Delhi at night", "Paharganj after dark"],
+          "emergency_contacts": {
+            "police": "100",
+            "ambulance": "108",
+            "women_helpline": "1091",
+            "tourist_police": "011-23365358"
+          },
+          "transportation_tips": [
+            "Metro is safe and efficient",
+            "Use pre-paid taxi booths at airports and stations",
+            "Avoid isolated areas at night"
+          ]
+        },
+        {
+          "city_name": "Bangalore",
+          "state": "Karnataka",
+          "population": 8443675,
+          "safety_metrics": {
+            "overall_safety": 7.8,
+            "women_safety": 7.2,
+            "transportation_safety": 7.5,
+            "night_safety": 6.8
+          },
+          "safe_areas": ["Indiranagar", "Koramangala", "MG Road", "Whitefield"],
+          "areas_to_avoid": ["KR Market at night", "Some parts of Shivajinagar after dark"],
+          "emergency_contacts": {
+            "police": "100",
+            "ambulance": "108",
+            "women_helpline": "1091",
+            "tourist_police": "080-22943322"
+          },
+          "transportation_tips": [
+            "App-based cabs are reliable",
+            "Metro connects major areas",
+            "Traffic congestion is common during peak hours"
+          ]
+        },
+        {
+          "city_name": "Chennai",
+          "state": "Tamil Nadu",
+          "population": 7088000,
+          "safety_metrics": {
+            "overall_safety": 8.1,
+            "women_safety": 7.5,
+            "transportation_safety": 7.9,
+            "night_safety": 7.2
+          },
+          "safe_areas": ["T. Nagar", "Adyar", "Besant Nagar", "Mylapore"],
+          "areas_to_avoid": ["Parts of North Chennai at night"],
+          "emergency_contacts": {
+            "police": "100",
+            "ambulance": "108",
+            "women_helpline": "1091",
+            "tourist_police": "044-28521368"
+          },
+          "transportation_tips": [
+            "MTC buses cover most of the city",
+            "Auto rickshaws may need negotiation",
+            "Metro and local trains are efficient"
+          ]
+        },
+        {
+          "city_name": "Kolkata",
+          "state": "West Bengal",
+          "population": 4496694,
+          "safety_metrics": {
+            "overall_safety": 7.5,
+            "women_safety": 7.0,
+            "transportation_safety": 7.6,
+            "night_safety": 6.7
+          },
+          "safe_areas": ["Park Street", "Salt Lake", "Ballygunge", "New Alipore"],
+          "areas_to_avoid": ["Certain parts of North Kolkata after dark"],
+          "emergency_contacts": {
+            "police": "100",
+            "ambulance": "108",
+            "women_helpline": "1091",
+            "tourist_police": "033-22505096"
+          },
+          "transportation_tips": [
+            "Metro is clean and efficient",
+            "Yellow taxis are metered",
+            "Trams offer unique experience but are slow"
+          ]
+        },
+        {
+          "city_name": "Hyderabad",
+          "state": "Telangana",
+          "population": 6993262,
+          "safety_metrics": {
+            "overall_safety": 7.3,
+            "women_safety": 6.7,
+            "transportation_safety": 7.1,
+            "night_safety": 6.5
+          },
+          "safe_areas": ["Banjara Hills", "Jubilee Hills", "Hitech City", "Gachibowli"],
+          "areas_to_avoid": ["Old City at late night", "Secunderabad railway station area after dark"],
+          "emergency_contacts": {
+            "police": "100",
+            "ambulance": "108",
+            "women_helpline": "1091",
+            "tourist_police": "040-23261166"
+          },
+          "transportation_tips": [
+            "MMTS trains connect key areas",
+            "Metro rail has good coverage",
+            "Auto rickshaws should use meters but often don't"
+          ]
+        },
+        {
+          "city_name": "Jaipur",
+          "state": "Rajasthan",
+          "population": 3046163,
+          "safety_metrics": {
+            "overall_safety": 7.0,
+            "women_safety": 6.3,
+            "transportation_safety": 6.8,
+            "night_safety": 6.0
+          },
+          "safe_areas": ["C-Scheme", "Civil Lines", "Malviya Nagar", "Raja Park"],
+          "areas_to_avoid": ["Some parts of the walled city at night"],
+          "emergency_contacts": {
+            "police": "100",
+            "ambulance": "108",
+            "women_helpline": "1091",
+            "tourist_police": "0141-5110512"
+          },
+          "transportation_tips": [
+            "Auto rickshaws should be negotiated beforehand",
+            "City buses cover major routes",
+            "Pink autos are designated for women"
+          ]
+        },
+        {
+          "city_name": "Ahmedabad",
+          "state": "Gujarat",
+          "population": 5577940,
+          "safety_metrics": {
+            "overall_safety": 7.6,
+            "women_safety": 7.0,
+            "transportation_safety": 7.3,
+            "night_safety": 6.8
+          },
+          "safe_areas": ["Satellite", "Bodakdev", "Navrangpura", "CG Road"],
+          "areas_to_avoid": ["Some parts of East Ahmedabad at night"],
+          "emergency_contacts": {
+            "police": "100",
+            "ambulance": "108",
+            "women_helpline": "1091",
+            "tourist_police": "079-26857510"
+          },
+          "transportation_tips": [
+            "BRTS buses are efficient and clean",
+            "Auto rickshaws usually use meters",
+            "Metro has limited coverage but expanding"
+          ]
+        },
+        {
+          "city_name": "Pune",
+          "state": "Maharashtra",
+          "population": 3124458,
+          "safety_metrics": {
+            "overall_safety": 7.7,
+            "women_safety": 7.1,
+            "transportation_safety": 7.2,
+            "night_safety": 6.9
+          },
+          "safe_areas": ["Koregaon Park", "Kalyani Nagar", "Aundh", "Baner"],
+          "areas_to_avoid": ["Certain parts of Budhwar Peth at night"],
+          "emergency_contacts": {
+            "police": "100",
+            "ambulance": "108",
+            "women_helpline": "1091",
+            "tourist_police": "020-26122880"
+          },
+          "transportation_tips": [
+            "Use app-based cabs for convenience",
+            "PMT buses connect most areas",
+            "Auto rickshaws should use meters but confirm beforehand"
+          ]
+        },
+        {
+          "city_name": "Varanasi",
+          "state": "Uttar Pradesh",
+          "population": 1198491,
+          "safety_metrics": {
+            "overall_safety": 6.5,
+            "women_safety": 5.8,
+            "transportation_safety": 6.2,
+            "night_safety": 5.7
+          },
+          "safe_areas": ["Cantonment area", "Lanka", "BHU Campus vicinity"],
+          "areas_to_avoid": ["Some narrow galis (lanes) after dark", "Isolated ghats at night"],
+          "emergency_contacts": {
+            "police": "100",
+            "ambulance": "108",
+            "women_helpline": "1090",
+            "tourist_police": "0542-2507784"
+          },
+          "transportation_tips": [
+            "Auto rickshaws need negotiation",
+            "Boat rides should be taken from official ghats",
+            "Walking can be challenging in old city's narrow lanes"
+          ]
+        }
+      ]
+    }
+  }
